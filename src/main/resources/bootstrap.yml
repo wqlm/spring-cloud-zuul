@@ -32,6 +32,7 @@ spring:
 #  ignored-patterns:
 #    - /config/**
 #    - /product/**
+# 关闭权限校验
 #management:
 #  security:
 #    enabled: false
