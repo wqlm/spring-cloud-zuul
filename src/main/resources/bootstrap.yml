@@ -26,12 +26,14 @@ spring:
 #      path: /myProduct/**
 #      # serverId 是要映射的服务名称
 #      serviceId: product
-#      # 制空 敏感 header 让 cookie 能传递到服务中
-#      sensitiveHeaders:
+#      # 置空 敏感 header 让 cookie 能传递到服务中
+#      #sensitiveHeaders:
 #  # 屏蔽掉一些路径,如下屏蔽了 /config /product 下所有的路径,
 #  ignored-patterns:
 #    - /config/**
 #    - /product/**
+#  # 置空 敏感 header 让所有项目的 cookie 能传递到服务中
+#  sensitive-headers:
 # 关闭权限校验
 #management:
 #  security:

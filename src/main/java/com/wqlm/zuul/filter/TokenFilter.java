@@ -40,11 +40,11 @@ public class TokenFilter extends ZuulFilter {
         HttpServletRequest httpServletRequest = requestContext.getRequest();
 
         // 取出 token，一般token会放在 url、header、cookie、参数 中，这里演示从 参数 中获取
-        String token = httpServletRequest.getParameter("token");
-        if (StringUtils.isEmpty(token)) {
-            requestContext.setSendZuulResponse(false);
-            requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
-        }
+//        String token = httpServletRequest.getParameter("token");
+//        if (StringUtils.isEmpty(token)) {
+//            requestContext.setSendZuulResponse(false);
+//            requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
+//        }
         return null;
     }
 }
