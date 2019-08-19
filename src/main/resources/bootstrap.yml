@@ -36,3 +36,12 @@ spring:
 #management:
 #  security:
 #    enabled: false
+
+# 配置 hystrix 超时，如果其他服务中有配置 hystrix 超时，那么网关中也要配置，且时长要比最大时长还有大
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
