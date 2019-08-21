@@ -37,11 +37,16 @@ spring:
 #  security:
 #    enabled: false
 
-# 配置 hystrix 超时，如果其他服务中有配置 hystrix 超时，那么网关中也要配置，且时长要比最大时长还有大
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 4000
+# 配置 hystrix 超时，如果其他服务中有配置 hystrix 超时，那么网关中也要配置，且时长要比最大时长还有大,正式版不这么配
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 4000
+
+# 如果其他服务超时，那么网关中也要配置，且时长要比最大时长还有大
+ribbon:
+  ReadTimeout: 4000
+  SocketTimeout: 4000
